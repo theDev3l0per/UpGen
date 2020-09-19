@@ -3,5 +3,7 @@ function save() {
 }
 function load() {
     data = JSON.parse(localStorage.getItem("data"))
-    
+    if (data.tab) {
+        
+    }
 }
