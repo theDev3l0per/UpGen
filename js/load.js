@@ -3,7 +3,5 @@ function save() {
 }
 function load() {
     data = JSON.parse(localStorage.getItem("data"))
-    if (data.tab) {
-        
-    }
+    if (typeof data.tab !== 'undefined') {app.player.tab = data.tab}
 }
