@@ -1,7 +1,7 @@
 function save() {
-    localStorage.setItem("data",app.player)
+    localStorage.setItem("data",JSON.stringify(app.player))
 }
 function load() {
-    data = localStorage.getItem("data")
-    return data
+    data = JSON.parse(localStorage.getItem("data"))
+    
 }
