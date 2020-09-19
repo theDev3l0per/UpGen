@@ -3,8 +3,8 @@ function save() {
 }
 function load() {
     data = JSON.parse(localStorage.getItem("data"))
-    if (typeof data.tab !== 'undefined') {app.player.tab = data.tab}
-    if (typeof data.points !== 'undefined') {app.player.points = Decimal(data.points)}
-    if (typeof data.hasGen !== 'undefined') {app.player.hasGen = data.hasGen}
+    if (typeof data.tab != 'undefined') {app.player.tab = data.tab}
+    if (typeof data.points != 'undefined') {app.player.points = Decimal(data.points)}
+    if (typeof data.gens != 'undefined') {app.player.gens = data.gens}
 }
 
