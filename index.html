@@ -6,8 +6,11 @@
     <title>Vue app</title>
 </head>
 <body>
-    <h1>My app!</h1>
-    <div id="app"></div>
+    <div id="app">
+        <div v-if="data.tab == generator" id="generator">
+            <h1>Hi</h1>
+        </div>
+    </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./js/main.js"></script>
     <script src="./js/load.js"></script>
