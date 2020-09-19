@@ -8,6 +8,10 @@
 </head>
 <body>
     <div id="app">
+        <table>
+            <td><button onclick="tab = 'generator'">Generator</button></td>
+            <td><button onclick="tab = 'upgrades'">Upgrades</button></td>
+        </table>
         <div v-if="tab == 'generator'" id="generator">
             <h1>Hi</h1>
         </div>
