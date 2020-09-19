@@ -1,3 +1,3 @@
 function switchtab(tab) {
-    app.tab = tab
+    app.player.tab = tab
 }

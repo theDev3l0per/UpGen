@@ -1,4 +1,8 @@
 const app = new Vue({
     el:"#app",
-    data: {tab: "generator"}
+    data: {
+        player: {
+            tab:"generator"
+        }
+    }
 })
