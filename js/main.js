@@ -6,3 +6,9 @@ const app = new Vue({
         }
     }
 })
+var gameloop = setInterval(loop,50)
+var saveloop = setInterval(save,10000)
+
+function loop() {
+
+}
