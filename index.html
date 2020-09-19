@@ -9,15 +9,18 @@
 </head>
 <body>
     <div id="app">
+        <h2>You have {{player.points}} points</h2>
         <table>
             <td><button onclick="switchtab('generator')">Generator</button></td>
             <td><button onclick="switchtab('upgrades')">Upgrades</button></td>
         </table>
         <div v-if="player.tab == 'generator'" id="generator">
-            <h1>Hi</h1>
+            <h3>Generators: {{player.gens}}</h3>
+            <button v-if="player.gens == 0" onclick="">Buy Generator | 10</button>
         </div>
     </div>
     <script src="https://unpkg.com/vue"></script>
+    <script src="./js/break_eternity.js"></script>
     <script src="./js/load.js"></script>
     <script src="./js/tabs.js"></script>
     <script src="./js/main.js"></script>
