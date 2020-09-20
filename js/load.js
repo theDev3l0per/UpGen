@@ -6,5 +6,6 @@ function load() {
     if (typeof data.tab != 'undefined') {app.player.tab = data.tab};
     if (typeof data.points != 'undefined') {app.player.points = new Decimal(data.points)};
     if (typeof data.gens != 'undefined') {app.player.gens = data.gens};
+    if (typeof data.value != 'undefined') {app.player.value = new Decimal(data.value)};
 }
 

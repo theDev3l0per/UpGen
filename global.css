@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
     margin-top: 1.3em;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
 }
 
 h1 {
@@ -43,6 +43,7 @@ h1 {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    outline: none;
 }
 
 button {
@@ -57,4 +58,5 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    outline: none;
 }
