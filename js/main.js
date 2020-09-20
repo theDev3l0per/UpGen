@@ -14,7 +14,7 @@ var saveloop = setInterval(save,10000)
 
 function loop() {
     if (app.player.gens == 1) {
-        app.player.points = new Decimal((app.player.points.add(app.player.value.div(20))).toFixed(1))
+        app.player.points = new Decimal((app.player.points.add(app.player.value.div(20))))
     }
 }
 
