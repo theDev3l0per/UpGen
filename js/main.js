@@ -8,12 +8,18 @@ const app = new Vue({
             upgrades: {
                 one: {
                     amt: 0,
-                    cost: 10
+                    cost: 10,
                 }
             }
         },
-        canbuys: {
-            canbuy1: function () {canbuy1()}
+        upgradefuncs: {
+            one: {
+                canbuy1: function () {return canbuy1()},
+                currently: function () {
+                    val = new Decimal(1.5)
+                    return val.pow(app.player.upgrades.one.amt)
+                }
+            }
         }
     }
 })
@@ -34,7 +40,7 @@ function resetgame() {
         upgrades: {
             one: {
                 amt: new Decimal(0),
-                cost: 10
+                cost: 10,
             }
         }
     }

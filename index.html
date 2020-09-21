@@ -19,7 +19,8 @@
             <button :class="{lighterButton:(!player.points.greaterThanOrEqualTo(10))}" v-if="player.gens == 0" onclick="buyGen()">Buy Generator | 10</button>
         </div>
         <div v-if="player.tab == 'upgrades'" id="upgrades">
-            <button onclick="buyup1()" :disabled="canbuys.canbuy1()">Buy Upgrade 1</button>
+            <br>
+            <button onclick="buyup1()" :disabled="upgradefuncs.one.canbuy1()">Multiply Production By 1.5<br>Cost: {{player.upgrades.one.cost}}<br>currently: {{upgradefuncs.one.currently()}}</button>
         </div>
     </div>
     <script src="https://unpkg.com/vue"></script>
