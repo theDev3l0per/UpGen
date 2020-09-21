@@ -5,7 +5,6 @@ const app = new Vue({
             tab:"generator",
             points: new Decimal(10),
             gens:0,
-            value: new Decimal(1)
         }
     }
 })
@@ -13,8 +12,8 @@ var gameloop = setInterval(loop,50)
 var saveloop = setInterval(save,10000)
 
 function loop() {
-    if (app.player.gens == 1) {
-        app.player.points = app.player.points.add(app.player.value.div(20))
+    if (app.player.gens > 0) {
+        addpoints()
     }
 }
 
@@ -22,8 +21,7 @@ function resetgame() {
     app.player = {
         tab:"generator",
         points: new Decimal(10),
-        gens:0,
-        value: new Decimal(1)
+        gens:0
     }
     save()
 }

@@ -12,7 +12,7 @@
         <h2>Points: {{player.points.toFixed(1)}}</h2>
         <table>
             <td><button onclick="switchtab('generator')">Generator</button></td>
-            <td><button onclick="switchtab('upgrades')">Upgrades</button></td>
+            <td><button v-if="player.gens > 0" onclick="switchtab('upgrades')">Upgrades</button></td>
         </table>
         <div v-if="player.tab == 'generator'" id="generator">
             <h3>Generators: {{player.gens}}</h3>

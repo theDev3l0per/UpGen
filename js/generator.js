@@ -4,3 +4,8 @@ function buyGen() {
     }
     app.player.gens++
 }
+
+function addpoints() {
+    value = new Decimal(1).div(20)
+    app.player.points = app.player.points.add(value)
+}
