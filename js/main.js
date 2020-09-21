@@ -5,6 +5,15 @@ const app = new Vue({
             tab:"generator",
             points: new Decimal(10),
             gens:0,
+            upgrades: {
+                one: {
+                    amt: 0,
+                    cost: 10
+                }
+            }
+        },
+        canbuys: {
+            canbuy1: function () {canbuy1()}
         }
     }
 })
@@ -21,7 +30,13 @@ function resetgame() {
     app.player = {
         tab:"generator",
         points: new Decimal(10),
-        gens:0
+        gens:0,
+        upgrades: {
+            one: {
+                amt: new Decimal(0),
+                cost: 10
+            }
+        }
     }
     save()
 }

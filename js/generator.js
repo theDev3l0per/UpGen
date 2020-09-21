@@ -6,6 +6,7 @@ function buyGen() {
 }
 
 function addpoints() {
-    value = new Decimal(1).div(20)
+    up1 = new Decimal(1.5).pow(app.player.upgrades.one.amt)
+    value = new Decimal(1).div(20).mul(up1)
     app.player.points = app.player.points.add(value)
 }
