@@ -2,7 +2,6 @@ function s() {
     localStorage.setItem("data",JSON.stringify(app.player))
 }
 
-
 function l() {
     data = JSON.parse(localStorage.getItem("data"))
     for (var key in data) {

@@ -1,6 +1,6 @@
 function buyGen() {
-    if (app.player.points.greaterThanOrEqualTo(10)) {
-        app.player.points = app.player.points.sub(10)
+    if (new Decimal(app.player.points).greaterThanOrEqualTo(10)) {
+        app.player.points = new Decimal(app.player.points).sub(10)
     }
     app.player.gens++
 }
