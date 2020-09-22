@@ -20,11 +20,13 @@ const app = new Vue({
                     return val.pow(app.player.upgrades.one.amt)
                 }
             }
-        }
+        },
+        decimal: function(x) {return new Decimal(x)} 
     }
 })
+l()
 var gameloop = setInterval(loop,50)
-var saveloop = setInterval(save,10000)
+var saveloop = setInterval(s,10000)
 
 function loop() {
     if (app.player.gens > 0) {
@@ -44,5 +46,5 @@ function resetgame() {
             }
         }
     }
-    save()
+    s()
 }

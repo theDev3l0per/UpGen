@@ -9,14 +9,14 @@
 </head>
 <body>
     <div id="app">
-        <h2>Points: {{player.points.toFixed(1)}}</h2>
+        <h2>Points: {{decimal(player.points).toFixed(1)}}</h2>
         <table>
             <td><button onclick="switchtab('generator')" class="big">Generator</button></td>
             <td><button v-if="player.gens > 0" onclick="switchtab('upgrades')" class="big">Upgrades</button></td>
         </table>
         <div v-if="player.tab == 'generator'" id="generator">
             <h3>Generators: {{player.gens}}</h3>
-            <button :class="{lighterButton:(!player.points.greaterThanOrEqualTo(10))}" v-if="player.gens == 0" onclick="buyGen()">Buy Generator | 10</button>
+            <button :class="{lighterButton:(!decimal(player.points).greaterThanOrEqualTo(10))}" v-if="player.gens == 0" onclick="buyGen()">Buy Generator | 10</button>
         </div>
         <div v-if="player.tab == 'upgrades'" id="upgrades">
             <br>
@@ -30,6 +30,5 @@
     <script src="./js/load.js"></script>
     <script src="./js/tabs.js"></script>
     <script src="./js/main.js"></script>
-    <script>load()</script>
 </body>
 </html>
